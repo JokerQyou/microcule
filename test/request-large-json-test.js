@@ -29,7 +29,7 @@ test('attempt to send large amount of JSON data to running microservice', functi
   // create a large JSON object
   var obj = {};
   for (var i = 0; i < 100; i++) {
-    obj[i] = new Buffer(1000).toString()
+    obj[i] = Buffer.alloc(1000).toString()
   }
 
   request({

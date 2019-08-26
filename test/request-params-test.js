@@ -51,7 +51,7 @@ test('attempt to send multipart form data to running microservice', function (t)
     // Pass a simple key-value pair
     my_field: 'my_value',
     // Pass data via Buffers
-    my_buffer: new Buffer([1, 2, 3]),
+    my_buffer: Buffer.from([1, 2, 3]),
     // Pass data via Streams
     my_file: fs.createReadStream(__dirname + '/request-params-test.js'),
     // Pass multiple values /w an Array
